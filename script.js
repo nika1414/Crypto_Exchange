@@ -1,5 +1,6 @@
 const select = document.querySelectorAll(".currency");
 const btn = document.getElementById("btn");
+const reverseBtn = document.getElementById("reverseBtn");
 const input = document.getElementById("input");
 const result = document.getElementById("result");
 result.placeholder = "Calculated Amount";
@@ -31,11 +32,17 @@ function display(data) {
     let value = input.value;
 
     console.log(currency1, currency2, value);
+
     if (currency1 != currency2) {
       let sum = (value * currency1) / currency2;
-      result.placeholder = "$" + Math.round(sum * 1000) / 1000;
+      result.placeholder = Math.round(sum * 100) / 100;
     } else {
       alert("It's the same Currency! Change it");
     }
+  });
+  reverseBtn.addEventListener("click", () => {
+    let currency1 = select[0].selectedIndex;
+    select[0].selectedIndex = select[1].selectedIndex;
+    select[1].selectedIndex = currency1;
   });
 }

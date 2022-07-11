@@ -2,6 +2,7 @@
   font-family: "ZCOOL QingKe HuangYou";
   font-size: large;
 }
+
 #firstBox {
   width: 600px;
   height: 450px;
@@ -10,6 +11,7 @@
   border-radius: 5px;
   top: 50%;
   left: 50%;
+  background-color: white;
   transform: translate(-50%, -50%);
 }
 
@@ -72,6 +74,22 @@
 }
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: black;
-  text-shadow: 0px 0px 2px blue;
+  color: rgb(0, 81, 255);
+  text-shadow: 0px 0px 1px blue;
+}
+
+#reverseBtn {
+  width: 50px;
+  height: 30px;
+  margin-left: 20px;
+  border: none;
+  background-color: rgb(0, 18, 121);
+  box-shadow: 1px 1px 4px rgb(0, 18, 121);
+  color: white;
+}
+#reverseBtn:hover {
+  cursor: pointer;
+  background-color: blue;
+  box-shadow: 1px 1px 4px blue;
+  text-shadow: 0px 0px 4px white;
 }
